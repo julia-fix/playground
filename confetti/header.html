@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Капитал — сравнение логотипов в шапке</title>
+<style>
+@font-face{font-family:"Gilroy Semibold";src:url("header-assets/Gilroy-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Gilroy Medium",sans-serif;background:#fff}
+ul{list-style:none;margin:0;padding:0}
+a{color:inherit;text-decoration:none}
+button{border:0;padding:0;cursor:pointer}
+.d-flex{display:flex}.align-items-center{align-items:center}
+@font-face{font-family:"Gilroy Bold";src:url("header-assets/Gilroy-Bold.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Gilroy Medium";src:url("header-assets/Gilroy-Medium.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Gilroy";src:url("header-assets/Gilroy-Medium.woff2") format("woff2");font-display:swap}
+header.header {
+    position: relative;
+    z-index: 55;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 181px;
+    height: auto;
+}
+
+.phone-item {
+    font: 600 20px / 1.4 "Gilroy Semibold", sans-serif;
+    color: #171b24;
+    border: 1px solid #d1d1d3;
+    border-radius: 8px;
+    padding: 12px 30px;
+    backdrop-filter: blur(20px);
+}
+
+.header {
+    display: flow-root;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 0 11px;
+    width: 100%;
+    max-width: 1750px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header__cities {
+    margin: 0;
+    margin-right: auto;
+    margin-left: 12px;
+    padding-left: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+}
+
+.header__cities::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 18px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.header__cities-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin: 0 !important;
+}
+
+.header__city {
+    font-family: 'Gilroy Medium', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    padding-left: 24px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__city::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 7.33333L14.6667 1.33333L8.66667 14L7.33333 8.66666L2 7.33333Z' fill='%2327814e' stroke='%2327814e' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e") center/contain no-repeat;
+}
+
+.header__city a {
+    color: #27814e;
+    text-decoration: underline;
+}
+
+li.header__city a {
+    color: #000;
+}
+
+li.header__city::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 7.33333L14.6667 1.33333L8.66667 14L7.33333 8.66666L2 7.33333Z' fill='black' stroke='black' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+}
+
+.header__city a:hover {
+    text-decoration: none;
+}
+
+.header__link {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #27814e;
+    border: 1px solid transparent;
+    padding: 12px 26px 13px;
+    margin-left: 20px;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.header__link:hover {
+    color: #27814e;
+    background-color: #fff;
+    border-color: #27814e;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.header-menu {
+    position: relative;
+}
+
+.header-menu .header__link {
+    display: none;
+}
+
+.header.show .header-menu {
+    max-height: 9999px;
+    position: absolute;
+    width: 100%;
+}
+
+.header.show .header-menu__list {
+    position: relative;
+    z-index: 51;
+}
+
+.header-menu__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header-menu__btn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 54px;
+    z-index: 999;
+    right: 27px;
+    bottom: 20px;
+    background: #fff;
+}
+
+.header-menu__btn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #27814e;
+    transition: background-color .1s ease-in .2s;
+}
+
+.header-menu__btn span::before,
+.header-menu__btn span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: #27814e;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    top: -12px;
+    transition: transform .2s ease-in, background-color .3s ease, .2s top .2s linear;
+}
+
+.header-menu__btn span::after {
+    top: 12px;
+}
+
+.header-menu__btn.active {
+    display: none;
+}
+
+.header-menu__list {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-menu__item {
+    position: relative;
+    display: flex;
+    transition: background-color .3s ease;
+}
+
+.inner-menu__link span span {
+    display: none;
+}
+
+.header-menu__item:last-child {
+    margin-right: 0;
+}
+
+.header-menu__item:hover {
+    background-color: #27814e;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.header-menu__item:hover .header-menu__link {
+    color: #fff;
+}
+
+.header-menu__item:hover>.inner-menu {
+    height: auto;
+    width: 705px;
+    background-color: #fff;
+    z-index: 10;
+    opacity: 1;
+    padding: 21px;
+    transition: opacity .5s ease;
+}
+
+.header-menu__item.active {
+    background-color: #27814e;
+}
+
+.header-menu__item.active .header-menu__link {
+    color: #fff;
+}
+
+.header-menu__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 17px;
+    border: 1px solid #77706f;
+    font: 500 16px / 1.4 "Gilroy Medium", sans-serif;
+    color: #222;
+    text-align: center;
+}
+
+.inner-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    background-color: #fff;
+    box-shadow: -11px 17px 25px 0 rgba(0, 0, 0, 0.25);
+    transition: opacity .5s ease;
+}
+
+.inner-menu:hover {
+    height: auto;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+.inner-menu li {
+    list-style: none;
+    display: flex;
+    width: calc(50% - 9px);
+    margin-right: 18px;
+    margin-bottom: 11px;
+}
+
+.inner-menu li:nth-child(even) {
+    margin-right: 0px;
+}
+
+.inner-menu__link {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f1f1f1;
+    flex-grow: 1;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+.inner-menu__link span {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #272727;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: color .3s ease;
+}
+
+.inner-menu__link div {
+    width: 0;
+    flex-shrink: 0;
+    min-height: 50px;
+    background-color: #27814e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-menu__link div:has(img) {
+    width: 59px;
+}
+
+.inner-menu--simple .inner-menu__link div {
+    background-color: #f1f1f1;
+}
+
+.inner-menu__link img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.inner-menu--simple .inner-menu__link img {
+    max-width: 80%;
+}
+
+.inner-menu__link:hover {
+    background-color: #27814e;
+    transition: background-color .3s ease;
+}
+
+.inner-menu__link:hover span {
+    color: #fff;
+    transition: color .3s ease;
+}
+
+.inner-menu__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.inner-menu__footer li {
+    width: 50%;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 0;
+    border: 1px solid #272727;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: background-color .3s ease;
+}
+
+.inner-menu__footer li:nth-child(even) {
+    border-left: none;
+}
+
+.inner-menu__footer li:nth-child(odd) {
+    border-right: none;
+}
+
+.inner-menu__footer li:first-child {
+    border: 1px solid #27814e;
+    border-left: 1px solid #27814e;
+    background-color: #27814e;
+}
+
+.inner-menu__footer li:first-child:hover {
+    background-color: #fff;
+    transition: background-color .3s ease;
+}
+
+.inner-menu__footer li:first-child:hover span {
+    color: #27814e;
+    transition: color .3s ease;
+}
+
+.inner-menu__footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-menu__footer-link span {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    color: #272727;
+    transition: color .3s ease;
+}
+
+.inner-menu__footer li:first-child span {
+    color: #fff;
+}
+
+@media (max-width: 1630px) {
+
+    .header-menu__item:hover>.inner-menu {
+        width: 300px;
+        right: auto;
+        left: -1px;
+    }
+
+    .inner-menu li {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 11px;
+    }
+
+    .inner-menu__footer li:nth-child(even) {
+        border-left: 1px solid #272727;
+    }
+}
+
+@media (max-width: 1460px) {
+    .header__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .header-menu {
+        width: 100%;
+        order: 1;
+    }
+
+    .header-menu__list {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .header-menu__item {
+        margin-right: 5px;
+    }
+
+    .header__wrapper {
+        background-color: #fff;
+        padding: 9px 0;
+        margin: 33px auto 20px;
+        flex-wrap: wrap;
+    }
+
+    .header__cities {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1090px) {
+    .header__link {
+        padding: 12px 15px 13px;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .phone-item {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 890px) {
+
+    header.header {
+        height: 100px;
+    }
+
+    .header__wrapper {
+        display: flex !important;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 15px;
+        z-index: 99;
+        width: calc(100% - 30px);
+        padding: 0 9px;
+        box-shadow: -4px 4px 15px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .phone-item {
+        padding: 0 !important;
+        border: none;
+    }
+
+    .header__cities {
+        display: none;
+    }
+
+    .header__city.active a {
+        color: #27814e !important;
+    }
+
+    .header__city.active::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 7.33333L14.6667 1.33333L8.66667 14L7.33333 8.66666L2 7.33333Z' fill='%2327814e' stroke='%2327814e' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+    }
+
+    .header__link {
+        display: none;
+    }
+
+    .header__city {
+        font-size: 18px;
+        line-height: 1.1;
+        margin-top: 10px;
+        padding-right: 0;
+        justify-content: flex-start;
+        min-width: 1px;
+        background-color: transparent;
+    }
+
+    .header-menu {
+        max-height: 0;
+        overflow: hidden;
+        display: none;
+    }
+
+    .header-menu .header__link {
+        display: inline-block;
+        font-family: 'Gilroy Bold', sans-serif;
+        font-size: 16px;
+        text-align: center;
+        color: #27814e;
+        background-color: #fff;
+        border-radius: 0;
+        padding: 6px 5px;
+        margin-left: 15px;
+        margin-right: auto;
+    }
+
+    .header-menu__btn {
+        display: flex;
+    }
+
+    .header-menu__list {
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .header-menu__item {
+        background-color: #f9f9f9;
+        padding: 3px 12px;
+        width: 100%;
+        min-height: 44px;
+        margin-right: 0;
+        flex: unset;
+    }
+
+    .header-menu__item:last-child {
+        flex-grow: 1;
+        order: 0;
+    }
+
+    .header-menu__item.active {
+        padding-right: 12px !important;
+        padding-left: 37px !important;
+    }
+
+    .header-menu__item.active::after {
+        right: auto;
+        left: 13px;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .header-menu__link {
+        font-family: "Gilroy Medium", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #272727;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 1;
+        width: 100%;
+        min-height: 38px;
+        border: none;
+    }
+
+    .header-menu__item:hover .header-menu__link {
+        color: #272727;
+    }
+
+    .inner-menu {
+        display: none;
+        height: auto;
+        width: 100%;
+        z-index: 0;
+        opacity: 1;
+        position: initial;
+        background-color: #77a8c6;
+        border: none;
+    }
+
+    .inner-menu li {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .inner-menu__link {
+        font-family: 'Century Gothic', sans-serif;
+        text-align: left;
+        padding: 6px 0;
+        color: #fff;
+    }
+
+    .header-menu__item:hover {
+        background-color: #f1f1f1;
+    }
+
+    .header-menu__item:hover>.inner-menu {
+        background-color: #77a8c6;
+        min-width: 1px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .header__wrapper {
+        margin-top: 20px;
+    }
+
+    .header .logo {
+        width: 125px;
+        height: auto;
+    }
+
+    .header .phone-item {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .header__cities {
+        margin-left: 22px;
+    }
+
+    .header .logo {
+        width: 115px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header .logo {
+        width: 105px;
+        height: auto;
+    }
+
+    .header .phone-item {
+        font-size: 12px;
+    }
+
+    .header-menu__btn {
+        width: 30px;
+        height: 50px;
+    }
+}
+
+
+.header-menu__item:hover > a.header-menu__link:not([href]) {
+  color: #fff;
+}
+
+.header-menu__item:focus-within > .inner-menu {
+  height: auto;
+  width: min(705px, 95vw);
+  background-color: #fff;
+  z-index: 10;
+  opacity: 1;
+  padding: 21px;
+}
+@media (max-width: 1630px) {
+  .header-menu__item:focus-within > .inner-menu {
+    width: 300px;
+    right: auto;
+    left: -1px;
+  }
+}
+.header-menu__link > img { width: 32px; height: 32px; object-fit: contain; margin-right: 8px; }
+
+
+main{display:grid;gap:clamp(64px,12vh,144px)}
+.header .header__wrapper{position:relative;top:auto;left:auto}
+.header .logo{position:relative;aspect-ratio:181/44;display:block}
+.logo iframe{border:0;height:auto;width:122%;aspect-ratio:208/82;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+@media(max-width:890px){.header .header__wrapper{width:100%}.header[data-menu-open] .header-menu{display:block;max-height:none;width:100%}}
+</style></head>
+<body><main aria-label="Сравнение двух версий логотипа"></main>
+<template id="site-header">
+<header class="header">
+<div class="header__wrapper">
+<div class="d-flex align-items-center">
+<a class="logo" aria-label="Капитал, главная страница" href="https://kapital62.ru/">
+<iframe tabindex="-1" aria-hidden="true">
+</iframe>
+</a>
+<div class="header__cities">
+<div class="header__city">
+<a href="#">Рязань</a>
+</div>
+<ul class="header__cities-list">
+<li class="header__city">
+<a href="https://kapital71.ru/">Тула</a>
+</li>
+<li class="header__city">
+<a href="https://kapital40.ru/">Калуга</a>
+</li>
+</ul>
+</div>
+</div>
+<nav class="header-menu" aria-label="Главная навигация">
+<div class="header-menu__wrapper">
+<ul class="header-menu__list">
+<a class="header__link" href="https://kapital62.ru/pages/kvartiry-v-ryazani">Подобрать квартиру</a>
+<li class="header-menu__item">
+<a class="header-menu__link">Наши объекты</a>
+<ul class="inner-menu">
+<li>
+<a class="inner-menu__link" href="https://жк-живи.рф">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3783-01-file-2.webp" alt="Живи" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Живи</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://жк-роща.рф/">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3035-01-file-2.png" alt="Роща" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Роща</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://дом-крылья.рф/">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3106-01-file-2.png" alt="Крылья" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Крылья</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://квартал-центральный.рф/">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-2401-01-file-2.png" alt="Респектабельный район Центральный" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Респектабельный район Центральный</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://бульвар-оптимистов.рф/">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-2402-01-file-2.png" alt="Бульвар оптимистов" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Бульвар оптимистов</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://xn----7sbabgv3abmduc5afyf9d7era.xn--p1ai/parking">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3036-01-file-2.png" alt="Многоуровневый паркинг" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Многоуровневый паркинг</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital62.ru/sale">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-2648-01-file-2.png" alt="Квартиры в сданных домах" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Квартиры в сданных домах</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital62.ru/pages/kvartiry-v-ryazani">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-2409-01-file-2.png" alt="Поиск квартиры" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Поиск квартиры</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital62.ru/gallery">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-21-01-file-2.png" alt="Фотоотчеты" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Фотоотчеты</span>
+</a>
+</li>
+<li class="navigation-footer">
+<ul class="inner-menu__footer">
+<li>
+<a class="inner-menu__footer-link" data-macro-type="agent" href="https://kapital62.ru/pages/vhod-v-agentskij-kabinet">
+<span>Вход для риэлтора</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__footer-link" data-macro-type="customer" href="https://kapital62.ru/#/macroclient/customer-auth/customer-login?studio=null&amp;activity=sell">
+<span>Вход для клиента</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="header-menu__item">
+<a class="header-menu__link" href="https://kapital62.ru/pages/kommercheskie-pomeshheniya">Коммерческие помещения</a>
+</li>
+<li class="header-menu__item">
+<a class="header-menu__link">О компании</a>
+<ul class="inner-menu inner-menu--simple">
+<li>
+<a class="inner-menu__link" href="https://about.kapital62.ru/about">
+<div>
+</div>
+<span>О нас</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/kapital62-vladelcam-zemli">
+<div>
+</div>
+<span>Владельцам земли</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/kapital62-tendery">
+<div>
+</div>
+<span>Тендеры</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/job-kapital62">
+<div>
+</div>
+<span>Карьера</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital62.ru/quest">
+<div>
+</div>
+<span>Отзывы о компании</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="header-menu__item">
+<a class="header-menu__link">Способы покупки</a>
+<ul class="inner-menu inner-menu--simple">
+<li>
+<a class="inner-menu__link" href="https://kapital62.ru/pages/akcii">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-2369-01-file-2.png" alt="Акции" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Акции</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/rassrochka62">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3462-01-file-2.png" alt="Рассрочка" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Рассрочка</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/62-ipoteka">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3464-01-file-2.png" alt="Ипотека" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Ипотека</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/ipotekabez_pv_rzn">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3469-01-file-2.png" alt="Ипотека без первого взноса" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Ипотека без первого взноса</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/trade-in-rzn">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3466-01-file-2.png" alt="Трейд-ин" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Трейд-ин</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/materinskiy-kapital-62">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3467-01-file-2.png" alt="Материнский капитал" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Материнский капитал</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/timeshops_rzn">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3468-01-file-2.png" alt="Подбор способа покупки" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Подбор способа покупки</span>
+</a>
+</li>
+<li>
+<a class="inner-menu__link" href="https://kapital-sk.info/invest-ryazan">
+<div>
+<img src="https://kapital62.ru/api/cms/media/file/62-3598-01-file-2.png" alt="Инвестиции в недвижимость" class="img_horizontal" loading="lazy" decoding="async"/>
+</div>
+<span>Инвестиции в недвижимость</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="header-menu__item">
+<a class="header-menu__link" href="https://kapital62.ru/pages/kontakty">Контакты</a>
+</li>
+</ul>
+</div>
+</nav>
+<a class="phone-item" href="tel:+74912901585">+7 (4912) 90-15-85</a>
+<button type="button" class="header-menu__btn site-icon-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-mobile-menu">
+<span>
+</span>
+</button>
+</div>
+</header>
+</template>
+<script>
+const main = document.querySelector('main')
+for (const [i, file] of ['index.html', 'v2.html'].entries()) {
+  const header = document.querySelector('#site-header').content.firstElementChild.cloneNode(true)
+  header.setAttribute('aria-label', 'Шапка с логотипом версии ' + (i + 1))
+  const frame = header.querySelector('iframe')
+  frame.title = 'Капитал — версия ' + (i + 1)
+  frame.src = file + '#header-logo'
+  const menu = header.querySelector('nav')
+  menu.id = 'menu-' + (i + 1)
+  const button = header.querySelector('button.header-menu__btn')
+  button.setAttribute('aria-controls', menu.id)
+  button.addEventListener('click', () => {
+    const open = header.toggleAttribute('data-menu-open')
+    button.setAttribute('aria-expanded', String(open))
+    button.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню')
+  })
+  main.append(header)
+}
+</script></body></html>
